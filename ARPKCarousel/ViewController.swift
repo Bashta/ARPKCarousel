@@ -46,9 +46,7 @@ class ViewController: UIViewController {
             index != currentIndex,
             index < imageArray.count else { return }
         currentIndex = index
-        SCNTransaction.begin()
         node.geometry?.material(named: "RedChairMaterial")?.diffuse.contents = imageArray[index]
-        SCNTransaction.commit()
     }
 }
 
@@ -63,7 +61,7 @@ extension ViewController: UICollectionViewDataSource {
         }
         let image = imageArray[indexPath.row]
         cell.imageView.image = image
-        cell.label.text = "Artwork \(indexPath.row)"
+        cell.label.text = "Color \(indexPath.row)"
         return cell
     }
 }

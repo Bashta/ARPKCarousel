@@ -32,9 +32,6 @@ class ThreeDView: SCNView {
             cameraNode = SCNNode()
             guard let cameraNode = cameraNode else { return }
             let camera = SCNCamera()
-//            camera.usesOrthographicProjection = true
-//            camera.orthographicScale = 9
-//            camera.zNear = 0
             camera.zFar = 250
             cameraNode.camera = camera
             scene.rootNode.addChildNode(cameraNode)
